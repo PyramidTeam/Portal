@@ -151,6 +151,7 @@ class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
 					$message .= TextFormat::DARK_GREEN."- ".$name.":\n";
 					$message .= "First ".(string) $portal->p1."\n";
 					$message .= "Second ".(string) $portal->p2."\n";
+					$message .= "Target ".(string) $portal->destination."\n";
 				}
 				
 				$sender->sendMessage($message);
