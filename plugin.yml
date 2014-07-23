@@ -1,0 +1,26 @@
+name: Portal
+main: Portal\PortalMainClass
+version: 3.0.0
+api: [1.0.0]
+load: POSTWORLD
+authors: [ljyloo]
+description: build your portal!hoho!
+website: https://github.com/PyramidTeam/Portal/
+commands:
+ portal:
+  description: "portal command"
+  usage: "Usage: /portal [Parameters]"
+  permission-message: Only allowed server operator to build portal.
+  aliases: [por]
+  permission: portal.command.portal
+permissions:
+ portal:
+  description: "Portal"
+  default: op
+  children:
+    command:
+      description: "Portal commands"
+      default: op
+      children:
+        portal:
+          description: "Commands to build portal"
