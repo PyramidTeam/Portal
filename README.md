@@ -1,4 +1,4 @@
 Portal
 ======
 
-A smart portal system.
+A PocketMine plugin
