@@ -16,8 +16,7 @@ use pocketmine\level\Position;
 use pocketmine\utils\Config;
 
 class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
-
-	private $temp;
+    private $temp;
 	private $editmode;
 	public $portals;
 
