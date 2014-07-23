@@ -48,10 +48,12 @@ class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
 	}
 	
 	public function myCommand(CommandSender $sender, array $args){
-		if(!($sender instanceof Player)){
-			$sender->sendMessage(TextFormat::RED . "This command only works in-game.");
-			return true;
-		}
+		if($args[0] !== "del" and $args[0] !== "delete" and $args[0] !== "list"){
+            if(!($sender instanceof Player)){
+                $sender->sendMessage(TextFormat::RED."This command only works in-game.");
+                return true;
+            }
+        }
 		if(!isset($args[0])){
 			$sender->sendMessage("Please input parameter.");
 			$this->send_usage($sender);
