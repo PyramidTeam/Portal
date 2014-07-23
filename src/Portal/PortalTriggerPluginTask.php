@@ -1,5 +1,4 @@
 <?php
-
 namespace Portal;
 
 use pocketmine\Player;
@@ -40,3 +39,4 @@ class PortalTriggerPluginTask extends PluginTask{
 		}
 	}
 }
+?>
