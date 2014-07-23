@@ -141,7 +141,7 @@ class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
 					return true;
 				}
 				
-				if(isset($args[1]) and (int) $args[1] > 1)$page = min(count($list), (int) $args[1]);
+				if(isset($args[1]) and (int) $args[1] > 1)$page = min(count(array_chunk($this->portals, 3)), (int) $args[1]);
 				else $page = 1;
 				
 				$list = array_chunk($this->portals, 3, true)[($page - 1)];
