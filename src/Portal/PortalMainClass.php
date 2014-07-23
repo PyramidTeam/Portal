@@ -145,7 +145,7 @@ class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
 				else $page = 1;
 				
 				$list = array_chunk($this->portals, 3, true)[($page - 1)];
-				$message = TextFormat::RED."-".TextFormat::RESET." showing portals (Page ".$page."/".count($list).") -\n";
+				$message = TextFormat::RED."-".TextFormat::RESET." showing portals (Page ".$page."/".count(array_chunk($this->portals, 3)).") -\n";
 				
 				foreach($list as $name => $portal){
 					$message .= TextFormat::DARK_GREEN."- ".$name.":\n";
