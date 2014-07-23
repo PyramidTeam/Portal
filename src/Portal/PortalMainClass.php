@@ -14,7 +14,6 @@ use pocketmine\math\Vector3 as Vector3;
 use pocketmine\entity\Entity;
 use pocketmine\level\Position;
 use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat;
 
 class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
     private $temp;
