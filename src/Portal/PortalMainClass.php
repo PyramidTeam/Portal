@@ -14,6 +14,7 @@ use pocketmine\math\Vector3 as Vector3;
 use pocketmine\entity\Entity;
 use pocketmine\level\Position;
 use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
 
 class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
     private $temp;
@@ -132,6 +133,26 @@ class PortalMainClass extends PluginBase implements Listener, CommandExecutor{
 					$this->editmode[$id] = true;
 					$sender->sendMessage("Activate edit mode.");
 				}
+				return true;
+			case "list":
+				if(count($this->portals) <= 0){
+					$sender->sendMessage(TextFormat::RED."It seems you haven't got any portals.");
+					return true;
+				}
+				
+				if(isset($args[1]) and (int) $args[1] > 1)$page = min(count($list), (int) $args[1]);
+				else $page = 1;
+				
+				$message = TextFormat::RED."-".TextFormat::RESET." showing portals (Page ".$page."/".count($list).") -\n";
+				$list = array_chunk($this->portals, 3, true)[($page - 1)];
+				
+				foreach($list as $name => $portal){
+					$message .= TextFormat::DARK_GREEN."- ".$name.":\n".TextFormat::RESET;
+					$message .= "First ".(string) $portal->p1."\n";
+					$message .= "Second ".(string) $portal->p2."\n";
+				}
+				
+				$sender->sendMessage($message);
 				return true;
 			default:
 				$sender->sendMessage("Wrong parameter.");
