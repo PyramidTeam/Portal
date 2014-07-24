@@ -4,7 +4,7 @@ Portal
 A PocketMine plugin
 
 # Commands
-To use the commands below, You should type /por `<command>` `<parameter>`
+To use the commands below, you should type /por `<command>` `<parameter>`
 
 | Command | Parameters | Description |
 | :---: | :---: | :--- |
