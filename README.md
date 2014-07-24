@@ -1,7 +1,7 @@
 Portal
 ======
 
-A PocketMine plugin
+A plugin for [PocketMine-MP](https://github.com/shoghicp/PocketMine-MP)
 
 # Commands
 To use the commands below, you should type /por `<command>` `<parameter>`
