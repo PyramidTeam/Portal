@@ -4,6 +4,7 @@ namespace Portal;
 use pocketmine\math\Vector3 as Vector3;
 use pocketmine\level\Position;
 use pocketmine\entity\Entity;
+use pocketmine\Event;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
