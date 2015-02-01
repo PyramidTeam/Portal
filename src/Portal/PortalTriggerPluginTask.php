@@ -5,7 +5,7 @@ use pocketmine\Player;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\Server;
 use pocketmine\plugin\Plugin;
-use pocketmine\event\entity\EntityMoveEvent;
+use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\entity\Entity;
 
 class PortalTriggerPluginTask extends PluginTask{
