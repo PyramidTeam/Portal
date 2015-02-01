@@ -3,7 +3,7 @@ namespace Portal;
 
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
-use pocketmine\event\entity\EntityMoveEvent;
+use pocketmine\event\entity\PlayerMoveEvent;
 use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\Server;
