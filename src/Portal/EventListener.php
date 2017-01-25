@@ -16,7 +16,7 @@ class EventListener implements Listener{
 		$this->plugin = $plugin;
 	}
 	
-	public function onPlayerMove(EntityMoveEvent $event){
+	public function onPlayerMove(PlayerMoveEvent $event){
 		$this->plugin->trigger($event->getEntity());
 	}
 
