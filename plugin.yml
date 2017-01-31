@@ -14,9 +14,24 @@ commands:
   aliases: [por]
   permission: portal.command.portal
 permissions:
- portal:
-  description: "Portal"
+ portal.command.pos1
+  description: "Set the 1st position where your feet is"
   default: op
+ portal.command.pos2
+  description:"Set the 2nd position where your feet is"
+  default: op
+ portal.command.tar
+  description: "Set destination where you're are unless countered by world name example: '/por tar world'"
+  default: op
+ portal.command.cre
+  description: "Create you portal after setting pos 1 and 2"
+  default: op
+ portal.command.del
+  description: "Delete an exsisting portal"
+  default: op
+ portal.command.list
+  description: "List all active portals"
+  default: true
   children:
     command:
       description: "Portal commands"
